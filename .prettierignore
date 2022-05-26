@@ -1,0 +1,5 @@
+# dotenv environment variables file
+.env
+.env.example
+README.md
+.eslintrc.json

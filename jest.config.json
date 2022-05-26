@@ -1,0 +1,17 @@
+{
+  "preset": "ts-jest",
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  },
+  "collectCoverage": true,
+  "testEnvironment": "node",
+  "testEnvironmentOptions": {
+    "NODE_ENV": "test",
+    "APP_ENV": "test"
+  },
+  "moduleDirectories": ["node_modules", "<rootDir>", "<rootDir>/src"],
+  "restoreMocks": true,
+  "coveragePathIgnorePatterns": ["/node_modules/", "/dist/"],
+  "modulePathIgnorePatterns": ["/node_modules/", "/dist/", "/public/"],
+  "coverageReporters": ["text", "lcov", "clover", "html"]
+}
