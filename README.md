@@ -25,6 +25,7 @@ Set the environment variables (it you want to change them)
 - **Docs**: with [APIDoc](https://apidocjs.com) format
 - **TS**: [Typescrpit](https://www.typescriptlang.org)
 - **Containerization**: with [Docker](https://www.docker.com) to easily deploy to AWS and generate a production 
+- **NoSQL database**: [MongoDB](https://www.mongodb.com/) object data modeling using [Mongoose](https://mongoosejs.com/) and hosted on [MongoDB Atlas](https://cloud.mongodb.com/)
 
 
 ## Commands
