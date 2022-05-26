@@ -12,3 +12,5 @@ export const PORT = process.env.PORT || 3001
 export const SERVER_URL = IS_DEV
   ? `http://localhost:${PORT}`
   : process.env.SERVER_URL
+
+export const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost:27017/'

@@ -1,4 +1,5 @@
 import app from './app'
+import 'shared/data/mongo'
 
 /**
  * Start Express server.

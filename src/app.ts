@@ -10,6 +10,7 @@ import morgan from 'morgan'
 
 import { PORT, corsOptions, ApiError } from 'shared/config'
 import { errorConverter, errorHandler } from 'shared/middlewares'
+
 import routes from './routes'
 
 // Create Express server
