@@ -1,5 +1,6 @@
 import { Response, Request, NextFunction } from 'express'
 import { validationResult } from 'express-validator'
+
 import { catchAsync } from 'shared/utils'
 
 export const validateRequest = () =>

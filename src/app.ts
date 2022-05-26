@@ -10,6 +10,7 @@ import morgan from 'morgan'
 
 import { PORT, corsOptions, ApiError } from 'shared/config'
 import { errorConverter, errorHandler } from 'shared/middlewares'
+import routes from './routes'
 
 // Create Express server
 const app = express()
@@ -33,9 +34,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // Routes
-app.use('/api', (_req: any, res: any, _next: any) =>
-  res.status(httpStatus.OK).send('Hello World')
-)
+app.use('/api/v1', routes())
 
 app.use((_req: any, _res: any, next: any) => {
   next(new ApiError(httpStatus.NOT_FOUND, 'Not found'))

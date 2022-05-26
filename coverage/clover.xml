@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1653581143697" clover="3.2.0">
-  <project timestamp="1653581143697" name="All files">
-    <metrics statements="80" coveredstatements="64" conditionals="23" coveredconditionals="8" methods="8" coveredmethods="5" elements="111" coveredelements="77" complexity="0" loc="80" ncloc="80" packages="3" files="9" classes="9"/>
+<coverage generated="1653585416532" clover="3.2.0">
+  <project timestamp="1653585416532" name="All files">
+    <metrics statements="88" coveredstatements="72" conditionals="23" coveredconditionals="8" methods="9" coveredmethods="5" elements="120" coveredelements="85" complexity="0" loc="88" ncloc="88" packages="4" files="12" classes="12"/>
     <package name="src">
-      <metrics statements="30" coveredstatements="29" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <metrics statements="36" coveredstatements="35" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
       <file name="app.ts" path="/Users/edgargagocarrillo/Desktop/Edgar/Github/hiring/fretello/src/app.ts">
-        <metrics statements="26" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <metrics statements="26" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -15,23 +15,32 @@
         <line num="9" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
-        <line num="50" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+      </file>
+      <file name="routes.ts" path="/Users/edgargagocarrillo/Desktop/Edgar/Github/hiring/fretello/src/routes.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
       </file>
       <file name="server.ts" path="/Users/edgargagocarrillo/Desktop/Edgar/Github/hiring/fretello/src/server.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -39,6 +48,17 @@
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.reporting.application">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="generateSongReport.ts" path="/Users/edgargagocarrillo/Desktop/Edgar/Github/hiring/fretello/src/app/reporting/application/generateSongReport.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/edgargagocarrillo/Desktop/Edgar/Github/hiring/fretello/src/app/reporting/application/index.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.shared.config">
