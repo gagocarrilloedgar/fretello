@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "ESNext",
+    "strict": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "paths": {
+      "src/*": ["src/*"],
+      "shared/*": ["src/shared/*"],
+      "app/*": ["src/app/*"],
+      "infrastructure/*": ["src/infrastructure/*"]
+    },
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["./src/**/*", "./test/**/*"],
+  "lib": ["es2021"]
+}
