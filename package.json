@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./dist/src/server.js",
-    "dev": "NODE_ENV=development TS_NODE_TRANSPILE_ONLY=true TS_NODE_FILES=true nodemon --watch 'src/**/*.ts' -r tsconfig-paths/register -r src/server.ts",
     "build": "tsc",
+    "start": "NODE_PATH=dist/ NODE_ENV=production node ./dist/src/server.js",
+    "dev": "NODE_ENV=development TS_NODE_TRANSPILE_ONLY=true TS_NODE_FILES=true nodemon --watch 'src/**/*.ts' -r tsconfig-paths/register -r src/server.ts",
     "lint": "eslint --ignore-path .gitignore . --ext .ts",
     "lint:fix": "npm run lint -- --fix",
-    "test": "NODE_ENV=test jest --verbose"
+    "prettier": "prettier --check src/**/*.ts",
+    "prettier:fix": "prettier --write ",
+    "test": "NODE_ENV=test jest --verbose",
+    "test:watch": "NODE_ENV=test jest --verbose --watch"
   },
   "keywords": [],
   "author": "",
