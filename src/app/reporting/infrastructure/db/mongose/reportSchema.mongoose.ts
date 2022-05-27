@@ -1,9 +1,10 @@
-import { Document, Schema, model } from 'mongoose'
+import { Document, Schema, model, Model } from 'mongoose'
 
 import { Report } from 'app/reporting/domain/interfaces'
 import { validateReportLocation } from 'app/reporting/domain/services'
 
-type ReportEntity = Document & Report
+export type ReportEntity = Document & Report
+export type IReportMongoModel = Model<ReportEntity>
 
 const ReportSchema = new Schema(
   {
@@ -38,5 +39,4 @@ ReportSchema.set('toJSON', {
   }
 })
 
-export const ReportMongoModel = () =>
-  model<ReportEntity>('Report', ReportSchema)
+export const ReportMongoModel: IReportMongoModel = model<ReportEntity>('Report', ReportSchema)

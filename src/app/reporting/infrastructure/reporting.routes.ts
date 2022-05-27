@@ -2,14 +2,15 @@ import { Router } from 'express'
 
 import { validateCreateReporting } from './validations'
 
-import { validateRequest } from 'src/shared/middlewares/validateRequest'
+import { ReportService } from 'app/reporting/domain/interfaces'
+import { validateRequest } from 'shared/middlewares/validateRequest'
 
 import { generateSongRequest } from './reporting.controller'
 
 const router = Router()
 
 // We will pass the reporting service once we know more about the domain and the use cases
-export const reportingRouter = () => {
+export const reportingRouter = (services: ReportService) => {
   /**
    * @api {post} /api/v1/reporting/generate Generate Song Request
    * @apiName generateSongRequest
@@ -33,7 +34,8 @@ export const reportingRouter = () => {
     '/generate',
     validateCreateReporting,
     validateRequest(),
-    generateSongRequest()
+    generateSongRequest(services.generateSongReport)
   )
+
   return router
 }

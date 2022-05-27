@@ -15,5 +15,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "curly": 0,
+        "indent": 0
     }
 }
