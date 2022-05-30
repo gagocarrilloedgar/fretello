@@ -1,4 +1,5 @@
 export * from './generateSongReport'
 export * from './getWeatherStatisticsData'
 export * from './queryWeatherByLocation'
+export * from './getLongestStreak'
 export * from './report.services'

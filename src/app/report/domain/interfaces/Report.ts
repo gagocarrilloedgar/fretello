@@ -24,6 +24,7 @@ export interface SongStatistics {
 export interface Report {
   id: string
   songId: string
+  userId: string
   location: Location
   weather?: SongWeather
   updatedAt: Date
