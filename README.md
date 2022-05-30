@@ -101,6 +101,15 @@ To modify the ESLint configuration, update the `.eslintrc.json` file. To modify 
 To prevent a certain file or directory from being linted, add it to `.eslintignore` and `.prettierignore`.
 
 
+## Improvements
+
+I have just unit tested the main funciontalities describen withtin the different probelms and not done integration testing to the different routes as I'd have to mockup all the data and either create a new database for testing or suing somethign similar to mongodb memory server.
+
+As I couldn't have access to the previous problem statements I have been modifying the report model in order to fit what I thougth it needed.
+
+The way I defined the structured is to be able to do unit testing for all the core functionalities whithout having to make use of a database or any other third party services. This way we can make sure the core is tested and we can change the database, the libraries we are using and it should still work.
+
+I haven't also reached 100% testing coverage as I thought it wasn't needed for this particular use case, we can talk more about different options for testing on the interview if needed.
 ## License
 
 MIT
