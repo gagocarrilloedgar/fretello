@@ -10,4 +10,8 @@ export interface ReportService {
     songId: string,
     queryWeatherByLocation: (location: Location) => Promise<SongWeather | null>
   ): Promise<{ success: SongStatistics[] | null; error: string | null }>
+  getLongestStreak(
+    songId: string,
+    userId: string
+  ): Promise<{ success: number | null; error: string | null }>
 }

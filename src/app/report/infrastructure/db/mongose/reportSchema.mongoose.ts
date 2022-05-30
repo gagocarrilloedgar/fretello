@@ -13,6 +13,10 @@ const ReportSchema = new Schema(
       required: true,
       unique: true
     },
+    userId: {
+      type: String,
+      required: true
+    },
     location: {
       type: {
         longitude: Number,
@@ -24,6 +28,15 @@ const ReportSchema = new Schema(
         message: 'Location must be between -180 and 180 and -90 and 90',
         isAsync: false
       }
+    },
+    weather: {
+      type: {
+        id: Number,
+        description: String,
+        icon: String,
+        main: String
+      },
+      required: false
     }
   },
   {

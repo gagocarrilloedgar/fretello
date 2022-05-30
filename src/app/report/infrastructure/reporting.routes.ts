@@ -5,7 +5,7 @@ import { validateCreateReporting } from './validations'
 import { ReportService } from 'src/app/report/domain/interfaces'
 import { validateRequest } from 'shared/middlewares/validateRequest'
 
-import { generateSongRequest, getWeatherStatistics } from './reporting.controller'
+import { generateSongRequest, getWeatherStatistics, getLongestStreak } from './reporting.controller'
 
 const router = Router()
 
@@ -37,10 +37,27 @@ export const reportingRouter = (services: ReportService) => {
     generateSongRequest(services.generateSongReport)
   )
 
+  /**
+   * @api {get} /api/v1/reporting/:songId/statistics Get Weather Statistics
+   * @apiName getWeatherStatistics
+   * @apiGroup Reporting
+   * @apiVersion 1.0.0
+   * @apiDescription Get weather statistics for a song
+   * @apiParam {String} songId Song id
+   * @apiSuccess {Object} response
+   * @apiSuccessExample {json} Success-Response:
+   * HTTP/1.1 200 OK
+   */
   router.get(
     '/:songId/statistics',
     validateRequest(),
     getWeatherStatistics(services.getWeatherStatisticsData, services.queryWeatherByLocation)
+  )
+
+  router.get(
+    '/:songId/longest-streak',
+    validateRequest(),
+    getLongestStreak(services.getLongestStreak)
   )
 
   return router

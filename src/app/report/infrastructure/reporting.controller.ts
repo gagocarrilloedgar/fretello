@@ -33,4 +33,17 @@ const getWeatherStatistics = (
     res.status(httpStatus.OK).send(songStats.success)
   })
 
-export { generateSongRequest, getWeatherStatistics }
+const getLongestStreak = (
+  computeLongestStreak: (
+    songId: string,
+    userId: string
+  ) => Promise<{ success: number | null; error: string | null }>
+) =>
+  catchAsync(async (req: Request, res: Response, _next: NextFunction) => {
+    const { songId, userId } = req.params
+    const longestStreak = await computeLongestStreak(songId, userId)
+    if (longestStreak.error) return res.status(httpStatus.BAD_REQUEST).send(longestStreak.error)
+    res.status(httpStatus.OK).send(longestStreak.success)
+  })
+
+export { generateSongRequest, getWeatherStatistics, getLongestStreak }
