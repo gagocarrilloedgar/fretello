@@ -5,7 +5,7 @@ import { validateCreateReporting } from './validations'
 import { ReportService } from 'src/app/report/domain/interfaces'
 import { validateRequest } from 'shared/middlewares/validateRequest'
 
-import { generateSongRequest } from './reporting.controller'
+import { generateSongRequest, getWeatherStatistics } from './reporting.controller'
 
 const router = Router()
 
@@ -35,6 +35,12 @@ export const reportingRouter = (services: ReportService) => {
     validateCreateReporting,
     validateRequest(),
     generateSongRequest(services.generateSongReport)
+  )
+
+  router.get(
+    '/:songId/statistics',
+    validateRequest(),
+    getWeatherStatistics(services.getWeatherStatisticsData, services.queryWeatherByLocation)
   )
 
   return router
