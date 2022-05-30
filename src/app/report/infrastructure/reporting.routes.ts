@@ -2,7 +2,7 @@ import { Router } from 'express'
 
 import { validateCreateReporting } from './validations'
 
-import { ReportService } from 'app/reporting/domain/interfaces'
+import { ReportService } from 'src/app/report/domain/interfaces'
 import { validateRequest } from 'shared/middlewares/validateRequest'
 
 import { generateSongRequest } from './reporting.controller'

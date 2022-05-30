@@ -1,4 +1,4 @@
-import { ReportRepository, ReportRequest, Report } from 'app/reporting/domain/interfaces'
+import { ReportRepository, ReportRequest, Report } from 'src/app/report/domain/interfaces'
 
 import { ReportMongoModel } from './reportSchema.mongoose'
 

@@ -1,7 +1,7 @@
 import { Document, Schema, model, Model } from 'mongoose'
 
-import { Report } from 'app/reporting/domain/interfaces'
-import { validateReportLocation } from 'app/reporting/domain/services'
+import { Report } from 'src/app/report/domain/interfaces'
+import { validateReportLocation } from 'src/app/report/domain/services'
 
 export type ReportEntity = Document & Report
 export type IReportMongoModel = Model<ReportEntity>

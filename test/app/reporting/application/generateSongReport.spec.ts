@@ -1,4 +1,4 @@
-import { generateSongReport } from 'src/app/reporting/application'
+import { generateSongReport } from 'src/app/report/application'
 
 describe('generateSongReport', () => {
   it('It should be a function', () => {

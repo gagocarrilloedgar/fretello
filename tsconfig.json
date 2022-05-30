@@ -3,6 +3,7 @@
     "module": "commonjs",
     "esModuleInterop": true,
     "target": "ESNext",
+    "resolveJsonModule": true,
     "strict": true,
     "sourceMap": true,
     "moduleResolution": "node",
@@ -13,7 +14,7 @@
       "src/*": ["src/*"],
       "shared/*": ["src/shared/*"],
       "app/*": ["src/app/*"],
-      "infrastructure/*": ["src/infrastructure/*"]
+      "song/*:": ["src/app/report/*"]
     },
     "forceConsistentCasingInFileNames": true
   },

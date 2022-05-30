@@ -1,8 +1,8 @@
 import { Router } from 'express'
 import httpStatus from 'http-status'
 
-import reportServices from 'app/reporting'
-import { reportingRouter } from 'app/reporting/infrastructure'
+import reportServices from 'src/app/report'
+import { reportingRouter } from 'src/app/report/infrastructure'
 
 const router = Router()
 

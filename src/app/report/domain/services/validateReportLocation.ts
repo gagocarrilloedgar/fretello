@@ -1,4 +1,4 @@
-import { Location } from 'app/reporting/domain/interfaces'
+import { Location } from 'src/app/report/domain/interfaces'
 
 export const validateReportLocation = (location: Location): boolean => {
   if (!location.latitude || !location.longitude) return false

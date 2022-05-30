@@ -1,4 +1,4 @@
-import { ReportService } from 'app/reporting/domain/interfaces'
+import { ReportService } from 'src/app/report/domain/interfaces'
 
 export interface AppServices {
   reportService: ReportService

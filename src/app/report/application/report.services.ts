@@ -1,4 +1,4 @@
-import { ReportRepository, ReportService } from 'app/reporting/domain/interfaces'
+import { ReportRepository, ReportService } from 'src/app/report/domain/interfaces'
 
 import { generateSongReport } from './generateSongReport'
 

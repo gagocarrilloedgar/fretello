@@ -1,5 +1,5 @@
-import { Report, ReportRequest } from 'app/reporting/domain/interfaces'
-import { validateReportLocation } from 'app/reporting/domain/services'
+import { Report, ReportRequest } from 'src/app/report/domain/interfaces'
+import { validateReportLocation } from 'src/app/report/domain/services'
 
 export const generateSongReport =
   (addNewSongReport: (newSongReport: ReportRequest) => Promise<Report>) =>

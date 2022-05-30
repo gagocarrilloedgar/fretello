@@ -2,7 +2,7 @@ import { Response, Request, NextFunction } from 'express'
 import httpStatus from 'http-status'
 
 import { catchAsync } from 'shared/utils'
-import { ReportRequest } from 'app/reporting/domain/interfaces'
+import { ReportRequest } from 'app/report/domain/interfaces'
 
 const generateSongRequest = (
   generateSongReport: (
@@ -19,4 +19,16 @@ const generateSongRequest = (
     res.status(httpStatus.OK).send({ message: 'To be defined' })
   })
 
-export { generateSongRequest }
+const getWeatherStatistics = (
+  getWeatherStatisticData: (
+    songId: string
+  ) => Promise<{ success: string | null; error: string | null }>
+) =>
+  catchAsync(async (req: Request, res: Response, _next: NextFunction) => {
+    const { songId } = req.params
+    const songStats = await getWeatherStatisticData(songId)
+    if (songStats.error) return res.status(httpStatus.BAD_REQUEST).send(songStats.error)
+    res.status(httpStatus.OK).send(songStats.success)
+  })
+
+export { generateSongRequest, getWeatherStatistics }
