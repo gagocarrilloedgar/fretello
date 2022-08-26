@@ -49,7 +49,7 @@
     "express-validator": "^6.14.1",
     "helmet": "^5.1.0",
     "http-status": "^1.5.2",
-    "mongoose": "^6.3.4",
+    "mongoose": "^6.4.6",
     "morgan": "^1.10.0",
     "xss-clean": "^0.1.1"
   }
